@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test YARA Rule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #f1f1f1; /* Light text */
+            padding: 20px;
+        }
+
+        #fileUploadForm {
+            background-color: #282828; /* Darker element background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+            margin-bottom: 20px;
+        }
+
+        #testResult {
+            background-color: #282828; /* Darker element background */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+            margin-top: 20px;
+        }
+
+        #testResult h2, #testResult h3 {
+            color: #4caf50; /* Lighter heading color */
+        }
+
+        #testResult ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #testResult li {
+            margin-bottom: 10px;
+            background-color: #333; /* Darker list item background */
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        #testResult li strong {
+            color: #4caf50; /* Lighter strong text color */
+        }
+
+        button {
+            background-color: #0056b3; /* Primary button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004494; /* Darker button hover color */
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Your YARA Rule</h1>
+    <form id="fileUploadForm" enctype="multipart/form-data">
+        <input type="file" name="exeFile" accept=".exe">
+        <button type="submit">Upload and Test</button>
+    </form>
+    <div id="testResult"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function() {
+            $('#fileUploadForm').submit(function(event) {
+                event.preventDefault();
+                var formData = new FormData(this);
+                $.ajax({
+                    type: 'POST',
+                    url: '/test_yara',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        var resultDiv = $('#testResult');
+                        resultDiv.empty(); // Clear previous results
+
+                        // Display VirusTotal scan results if available
+                        if (response.vt_data && response.vt_data.data && response.vt_data.data.attributes) {
+                            var attributes = response.vt_data.data.attributes;
+                            var results = attributes.results;
+                            var stats = attributes.stats;
+
+                            var resultHtml = '<h2>YarWeb Scan Results</h2>';
+                            resultHtml += '<p><strong>Malicious:</strong> ' + stats.malicious + '</p>';
+                            resultHtml += '<p><strong>Harmless:</strong> ' + stats.harmless + '</p>';
+                            resultHtml += '<p><strong>Undetected:</strong> ' + stats.undetected + '</p>';
+                            resultHtml += '<h3>Details:</h3><ul>';
+
+                            $.each(results, function(engine, data) {
+                                resultHtml += '<li><strong>' + engine + ':</strong> ' + (data.result || 'No result') + ' (' + data.category + ')</li>';
+                            });
+
+                            resultHtml += '</ul>';
+                            resultDiv.append(resultHtml);
+                        } else {
+                            resultDiv.append('<p>Error processing VirusTotal scan results. Response may not contain expected data.</p>');
+                        }
+
+                        // Display YARA rule matching result
+                        resultDiv.append('<p><strong>YARA Matching Result:</strong> ' + response.yara_result + '</p>');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        $('#testResult').html('<p>An error occurred: ' + textStatus + ', ' + errorThrown + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

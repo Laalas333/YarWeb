@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Your App</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+</head>
+<body>
+    <img src="https://vinepair.com/wp-content/uploads/2021/12/punchdrunk1_mobile.gif" alt="Background" id="background-image" class="background-video">
+<div class="logo-container">
+    <a href="demo.html" class="logo-link">
+        <img src="https://i.imgur.com/Rl2anl7.png" alt="Company Logo" class="company-logo">
+    </a>
+</div>
+    <div class="header-container">
+        <header class="page-header">
+            <h1>Welcome to YarWeb</h1>
+        </header>
+    </div>
+
+   <div class="login-container">
+        <div class="login-modal">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'loginTab')">Sign in</button>
+                <button class="tab-button" onclick="openTab(event, 'registerTab')">New account</button>
+            </div>
+
+            <div id="loginTab" class="tab-content active">
+                <form class="login-form" action="/login" method="POST">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    
+                    <button type="submit" class="signin-button">Sign in</button>
+                    
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                </form>
+
+                <div class="social-login">
+                    <hr class="divider">
+                    <button id="guest-login" onclick="window.location.href='page2.html'" class="guest-login-button">Sign in as Guest</button>
+                    <p class="or">Or connect with:</p>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+            </div>
+
+            <div id="registerTab" class="tab-content">
+    <form class="register-form" action="/register" method="POST">
+        <label for="reg-name">Name</label>
+        <input type="text" id="reg-name" name="reg-name" placeholder="Enter name" required>
+
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="reg-email" placeholder="Enter email" required>
+    
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" name="reg-password" placeholder="Create password" required>
+
+        <label for="reg-confirm-password">Confirm Password</label>
+        <input type="password" id="reg-confirm-password" name="reg-confirm-password" placeholder="Confirm password" required>
+    
+        <button type="submit" class="register-button">Create Account</button>
+    </form>
+</div>
+
+        </div>
+    </div>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -10; /* Keep the video behind other elements */
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 999; /* Ensure the logo appears above other content */
+}
+
+/* Logo link styles */
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.company-logo {
+    position: absolute; /* Position the logo absolutely within the container */
+    top: 0; /* Place the logo at the top */
+    left: 0; /* Place the logo at the left */
+    width: 180px; /* Adjust the width as needed */
+    height: 28px; /* Adjust the height as needed */
+    z-index: 9999; /* Ensure the logo is above other content */
+}
+
+.company-logo:hover {
+    opacity: 0.8; /* Reduce opacity on hover for a clickable effect */
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  /* rest of your content styles */
+}
+.page-header h1 {
+  font-size: 38px;
+  color: #f3f5f3; /* Adjust text color to ensure visibility over the background */
+  margin-top: 20px; /* Reduce the top margin if it's too large */
+  margin-bottom: 20px; /* Reduce space between the header and the login box */
+  padding: 0; /* Adjust padding as needed */
+  text-align: center;
+  letter-spacing: 1px; /* Stylistic choice for headers */
+  
+  /* 3D effect */
+  text-shadow: 
+    0 1px 0 #f0e4e4,
+    0 2px 0 #957171,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,0.1),
+    0 0 5px rgba(0,0,0,0.1),
+    0 1px 3px rgba(232, 17, 17, 0.3),
+    0 3px 5px rgba(0,0,0,0.2),
+    0 5px 10px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.2),
+    0 20px 20px rgba(0,0,0,0.15);
+  
+  /* Perspective */
+  transform: translateZ(0); /* For better 3D positioning */
+  perspective: 500px; /* Lower values for more extreme 3D effect */
+}
+
+/* Adjust the overall page styling to accommodate the 3D text */
+.page-header {
+  text-align: center;
+  margin: 0; /* Remove margin if not needed */
+  padding: 20px 0; /* Adjust padding to ensure the header is visible */
+  position: relative;
+  overflow: hidden; /* To avoid scrolling due to the 3D effect */
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 380px; /* Adjust width as needed */
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #777;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-button.active, .tab-button:hover {
+  color: #4285f4;
+  border-bottom: 2px solid #4285f4;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label, .register-form label {
+  margin-top: 10px;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.signin-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signin-button:hover {
+  background-color: #357ae8;
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 10px; /* Reduced margin */
+  margin-bottom: 5px; /* Reduced margin */
+}
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the button in the flex container */
+  justify-content: center;
+  text-align: center; /* This centers the text if needed */
+  margin-top: 0px;
+}
+.register-form input[type="text"] {
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Google button customization */
+.g-signin2 {
+  margin: 0 auto; /* This should already center the button */
+  display: block; /* This should be enough with the above margin */
+}
+
+
+
+.divider {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.or {
+  color: #757575;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Google button customization */
+.g-signin2 {
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  margin-top: 10px;
+}
+
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.register-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-button:hover {
+  background-color: #357ae8;
+}
+
+/* Ensure that the Register tab content has the same base styling as the Login tab */
+#registerTab {
+  padding: 20px 0;
+}
+
+
+/*...
+*/
+
+.guest-login-button {
+  background-color: #757575; /* Neutral color for guest login */
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px; /* Adjust margin to move button up */
+  margin-bottom: 20px; /* Add some space before the 'Or connect with' text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto; /* Auto width to fit content */
+  display: inline-block; /* Align button inline with text */
+}
+
+
+.guest-login-button:hover {
+  background-color: #43d41b; /* Darken the button a bit on hover for visual feedback */
+}
+
+</style>
+<script>
+function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Event listener for enabling register button
+        document.addEventListener('DOMContentLoaded', function() {
+            var registerForm = document.querySelector('.register-form');
+            registerForm.addEventListener('input', function() {
+                var name = document.getElementById('reg-name').value;
+                var email = document.getElementById('reg-email').value;
+                var password = document.getElementById('reg-password').value;
+                var registerButton = registerForm.querySelector('.register-button');
+                registerButton.disabled = !(name && email && password);
+            });
+        });
+
+// Google Sign-In callback function
+function onSignIn(googleUser) {
+  // Get the user's profile information
+  // You can send this information to your server if needed
+  
+  // For example, you could retrieve the Google user's email
+  var email = googleUser.getBasicProfile().getEmail();
+  
+  // (Optional) You might want to redirect the user or change the UI
+}
+</script>
+</body>
+</html>

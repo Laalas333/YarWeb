@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malware Type Selection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to your CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Select a Malware Type</h1>
+    <div class="signature-container">
+        <!-- Signature boxes -->
+        <div class="signature-box" data-malware-type="AgentTesla">
+            <span>AgentTesla</span>
+            <img src="https://i.imgur.com/OU8PeO6.png" alt="AgentTesla Logo" class="malware-logo">
+            <button class="go-button">Go</button>
+        </div>
+        <div class="signature-box" data-malware-type="SnakeKeylogger">
+            <span>SnakeKeylogger</span>
+            <img src="https://i.imgur.com/j2MpVGI.png" alt="SnakeKeylogger Logo" class="malware-logo">	
+            <button class="go-button">Go</button>
+        </div>
+        <div class="signature-box" data-malware-type="RedLineStealer">
+            <span>RedLineStealer</span>
+            <img src="https://i.imgur.com/Tm7mdFz.png" alt="RedLineStealer Logo" class="malware-logo">
+            <button class="go-button">Go</button>
+        </div>
+        <div class="signature-box" data-malware-type="Loki">
+            <span>Loki</span>
+            <img src="https://i.imgur.com/WGrNBN4.png" alt="Loki Logo" class="malware-logo">
+            <button class="go-button">Go</button>
+        </div>
+    </div>
+
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* Light text */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #00ffea; /* Solana-like blue */
+    margin-bottom: 40px;
+}
+
+.signature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.signature-box {
+    width: 45%;
+    height: 200px;
+    border: 2px solid #00ffea; /* Solana-like blue border */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2a2a2a; /* Slightly lighter dark background */
+    border-radius: 10px;
+}
+
+.signature-box:hover {
+    box-shadow: 0 4px 15px rgba(0, 255, 234, 0.6); /* Glowing effect on hover */
+}
+
+.selected-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 10;
+    width: 60%;
+    height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.go-button, .signature-box a button {
+    border: none;
+    background-color: #00ffea; /* Solana-like blue */
+    color: #1a1a1a; /* Dark text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.go-button:hover, .signature-box a button:hover {
+    background-color: #13c8d9; /* Lighter blue on hover */
+}
+
+.signature-box a {
+    text-decoration: none;
+    color: #ffffff; /* Light text for links */
+}
+
+.malware-logo {
+    max-width: 100px;  /* Adjust the maximum width as needed */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    width: auto;       /* Maintain aspect ratio */
+    height: auto;      /* Maintain aspect ratio */
+    margin: 10px auto; /* Adds margin and centers image */
+    display: block;    /* Ensures the image is centered */
+}
+
+
+
+</style>
+
+<script>
+    $(document).ready(function() {
+        var selectedBox = null;
+        var originalIndex = -1;
+
+        function bindGoButtonClick() {
+            $('.go-button').click(function() {
+                var $box = $(this).closest('.signature-box');
+                selectedBox = $box;  // Store the selected box
+                originalIndex = $box.index();  // Store the original index
+                var malwareType = $box.attr('data-malware-type');
+                $('.signature-container').hide();  // Hide other elements
+                $box.addClass('selected-box').appendTo('body');  // Enlarge and center the selected box
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/generate',
+                    data: { 'malwareType': malwareType },
+                    success: function(response) {
+                        var downloadLink = $('<a>')
+                            .attr('href', '/download/' + response.filename)
+                            .attr('download', response.filename)
+                            .text('Download YARA Rule');
+                        var testButton = $('<a>')
+                            .attr('href', '/test.html')
+                            .append($('<button>').text('Test Rule'));
+                        $box.find('.go-button').replaceWith(testButton);
+                        $box.append(downloadLink);
+                    }
+                });
+            });
+        }
+
+        bindGoButtonClick();  // Bind the click event to the Go button
+
+        $(document).click(function(event) {
+            if(selectedBox && !selectedBox.is(event.target) && selectedBox.has(event.target).length === 0) {
+                selectedBox.removeClass('selected-box');  // Reset the selected box
+                selectedBox.find('a, button').remove();  // Remove the download link and test button
+                selectedBox.append($('<button>').addClass('go-button').text('Go'));  // Re-add Go button
+                bindGoButtonClick();  // Re-bind the click event to the new Go button
+                
+                if (originalIndex >= 0) {
+                    $('.signature-container').children().eq(originalIndex - 1).after(selectedBox);  // Insert the box back in its original position
+                }
+                $('.signature-container').show();  // Show the container again
+                selectedBox = null; // Reset the selected box variable
+                originalIndex = -1;  // Reset the original index
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

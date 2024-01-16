@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c; /* Dark background */
+            color: #fff; /* Light text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .dashboard-container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #292929;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .user-data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .user-info {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .user-info p {
+            margin: 5px 0;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Admin Dashboard</h1>
+        <div class="user-data-container">
+            {% for user in users %}
+            <div class="user-info">
+                <p>Username: {{ user.username }}</p>
+                <p>Logins: {{ user.logins }}</p>
+                <p>Time Spent: {{ user.time_spent }} seconds</p>
+            </div>
+            {% endfor %}
+        </div>
+<div class="update-yara-section">
+    <h2>Update YARA Rule</h2>
+    <form action="{{ url_for('update_yara_rule') }}" method="post" enctype="multipart/form-data">
+        <label for="signature">Select Signature:</label>
+        <select name="signature" id="signature">
+            <option value="AgentTesla">AgentTesla</option>
+            <option value="SnakeKeylogger">SnakeKeylogger</option>
+            <option value="RedLineStealer">RedLineStealer</option>
+            <option value="Loki">Loki</option>
+        </select>
+        <button type="button" onclick="downloadTemplate()">Download Template</button>
+        <br>
+        <label for="string_file">Upload updated string file:</label>
+        <input type="file" name="string_file" accept=".txt">
+        <button type="submit">Update YARA Rule</button>
+    </form>
+</div><br>
+        <button onclick="window.location.href='{{ url_for('index1') }}'" class="button">Get Started</button>
+        <button onclick="window.location.href='{{ url_for('logout') }}'" class="button">Logout</button>
+    </div><br>
+
+</body>
+<script>
+function downloadTemplate() {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent('$u0 = "string";'));
+    element.setAttribute('download', "yara_string_template.txt");
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+</script>
+</html>
