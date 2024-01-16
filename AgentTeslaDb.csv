@@ -1,0 +1,80 @@
+Malware_sha256,Malicious_strings
+0ef85406b6effa7a7ce0748cea4c755efcb8e8ba8cf3201ce8591b3c9acf51da,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""OUIkm.exe"" fullword wide
+$s3 = ""6C546A4F59"" wide /* hex encoded string 'lTjOY' */
+$s4 = ""OUIkm.pdb"" fullword ascii
+$s5 = ""get_WinFormAppConnectionString"" fullword ascii
+$s6 = ""lblPassword"" fullword wide
+$s7 = ""inputPassword"" fullword wide
+$s8 = ""inputDescription"" fullword wide
+$s9 = ""_DescriptionT"" fullword ascii
+$s10 = ""System.Windows.Forms.TreeNode"" fullword wide
+$s11 = ""WinFormApp.Properties.Settings.WinFormAppConnectionString"" fullword wide
+$s12 = ""get_MenuTransact"" fullword ascii
+$s13 = ""get_NewWindow"" fullword ascii
+$s14 = ""get_MenuName"" fullword ascii
+$s15 = ""logOutput"" fullword wide
+$s16 = ""get_idParentMenu"" fullword ascii
+$s17 = ""get_MenuFunction"" fullword ascii
+$s18 = ""menuTree_DragEnter"" fullword ascii
+$s19 = ""get_menuTypeName"" fullword ascii
+$s20 = ""get_MenuOrder"" fullword ascii"
+8c72d6594c46c605916cf3456b84810a1982c7f62f9c66d7eeb12bd0da0e82d0,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADh"" fullword ascii
+$s3 = ""OCWsy.exe"" fullword wide
+$s4 = ""get_passWord"" fullword ascii
+$s5 = ""7245557758"" wide /* hex encoded string 'rEUwX' */
+$s6 = ""select * from Account where UserName = '{0}' and PassWord = '{1}'"" fullword wide
+$s7 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s8 = ""OCWsy.pdb"" fullword ascii
+$s9 = ""set_passWord"" fullword ascii
+$s10 = ""AccountId"" fullword wide
+$s11 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s12 = ""get_AssemblyDescription"" fullword ascii
+$s13 = ""EditEmployee"" fullword ascii
+$s14 = ""DonNha.DTO"" fullword ascii
+$s15 = ""DonNha.SSA"" fullword ascii
+$s16 = ""get_FoodName"" fullword ascii
+$s17 = ""get_Quantity"" fullword ascii
+$s18 = ""getOrderId"" fullword ascii
+$s19 = ""get_EmployeeName"" fullword ascii
+$s20 = ""get_TotalPrice"" fullword ascii"
+b539f1f7156011eee9786885843a4fa5a3329cfafb00b07424bd3ead34d8d1d9,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADs"" fullword ascii
+$s3 = ""Becml.exe"" fullword wide
+$s4 = ""5355557257"" wide /* hex encoded string 'SUUrW' */
+$s5 = ""Connect attempt failed; Handshake already in progress"" fullword wide
+$s6 = ""m_executeFlushSendQueue"" fullword ascii
+$s7 = ""5asyncWinForms.Service+<RunAsyncMathWrappedInTask>d__2"" fullword ascii
+$s8 = ""2asyncWinForms.Service+<RunMathInternallyAsync>d__8"" fullword ascii
+$s9 = ""TEMPER5"" fullword ascii
+$s10 = ""<runDialog>5__2"" fullword ascii
+$s11 = ""TEMPER3"" fullword ascii
+$s12 = ""<RunDialog>b__0"" fullword ascii
+$s13 = ""TEMPER4"" fullword ascii
+$s14 = ""TEMPER2"" fullword ascii
+$s15 = ""TEMPER6"" fullword ascii
+$s16 = ""TEMPER1"" fullword ascii
+$s17 = ""Received Connect, but we're not accepting incoming connections!"" fullword wide
+$s18 = "":1\""><NewRemoteHost></NewRemoteHost><NewExternalPort>"" fullword wide
+$s19 = ""<u:GetExternalIPAddress xmlns:u=\""urn:schemas-upnp-org:service:"" fullword wide
+$s20 = "":1\""></u:GetExternalIPAddress>"" fullword wide"
+f35c56911d58753abb244cf6c07e780fdb30de306e454fedc8e20dd230b71ffa,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADC"" fullword ascii
+$s3 = ""mqbHE.exe"" fullword wide
+$s4 = ""Connect attempt failed; Handshake already in progress"" fullword wide
+$s5 = ""4E68746450"" wide /* hex encoded string 'NhtdP' */
+$s6 = ""m_executeFlushSendQueue"" fullword ascii
+$s7 = ""5asyncWinForms.Service+<RunAsyncMathWrappedInTask>d__2"" fullword ascii
+$s8 = ""2asyncWinForms.Service+<RunMathInternallyAsync>d__8"" fullword ascii
+$s9 = ""TEMPER5"" fullword ascii
+$s10 = ""<runDialog>5__2"" fullword ascii
+$s11 = ""TEMPER3"" fullword ascii
+$s12 = ""<RunDialog>b__0"" fullword ascii
+$s13 = ""TEMPER4"" fullword ascii
+$s14 = ""TEMPER2"" fullword ascii
+$s15 = ""TEMPER6"" fullword ascii
+$s16 = ""TEMPER1"" fullword ascii
+$s17 = ""Received Connect, but we're not accepting incoming connections!"" fullword wide
+$s18 = "":1\""><NewRemoteHost></NewRemoteHost><NewExternalPort>"" fullword wide
+$s19 = ""<u:GetExternalIPAddress xmlns:u=\""urn:schemas-upnp-org:schemas-upnp-org:service:"" fullword wide"

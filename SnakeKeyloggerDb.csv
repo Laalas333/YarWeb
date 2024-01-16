@@ -1,0 +1,161 @@
+Malware_sha256,Malicious_strings
+0fcc6d53f8ef84332db1f7e6f884870964ef6b6d718000cfbaaa224dcb5fb90e,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""aKveL.exe"" fullword wide
+$s3 = ""694F6B4A42"" wide /* hex encoded string 'iOkJB' */
+$s4 = ""aKveL.pdb"" fullword ascii
+$s5 = ""inputPassword"" fullword wide
+$s6 = ""get_WinFormAppConnectionString"" fullword ascii
+$s7 = ""lblPassword"" fullword wide
+$s8 = ""ffW9yKF1j"" fullword ascii /* base64 encoded string '}or(]c' */
+$s9 = ""inputDescription"" fullword wide
+$s10 = ""_DescriptionT"" fullword ascii
+$s11 = ""System.Windows.Forms.TreeNode"" fullword wide
+$s12 = ""WinFormApp.Properties.Settings.WinFormAppConnectionString"" fullword wide
+$s13 = ""get_MenuFunction"" fullword ascii
+$s14 = ""get_idParentMenu"" fullword ascii
+$s15 = ""get_menuType1"" fullword ascii
+$s16 = ""* F,M'T"" fullword ascii
+$s17 = ""getMenuType"" fullword ascii
+$s18 = ""logOutput"" fullword wide
+$s19 = ""get_MenuName"" fullword ascii
+$s20 = ""get_menuTypeName"" fullword ascii"
+4004dee4dd9f342596495d060e726a3c9d95829ce7b29d90424f784e33c9299f," $s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADo"" fullword ascii
+$s3 = ""OrbOfEverything.exe"" fullword wide
+$s4 = ""OrbOfEverything.Game.Logic.Enemy"" fullword ascii
+$s5 = ""OrbOfEverything.Game.Logic.Player"" fullword ascii
+$s6 = ""OrbOfEverything.Game.Logic.Core"" fullword ascii
+$s7 = ""OrbOfEverything.Game.Logic.PowerUp"" fullword ascii
+$s8 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s9 = ""targetDuration"" fullword ascii
+$s10 = ""MakeInvulnerable"" fullword ascii
+$s11 = ""IsVulnerable"" fullword ascii
+$s12 = ""MakeVulnerable"" fullword ascii
+$s13 = ""OrbOfEverything.GameDefeatDialog"" fullword ascii
+$s14 = ""GameDefeatDialog_FormClosed"" fullword ascii
+$s15 = ""get_enemyOrbInBlue"" fullword ascii
+$s16 = ""get_enemyOrbInPurple"" fullword ascii
+$s17 = ""OrbOfEverything.GameDefeatDialog.GameDefeatDialog.resources"" fullword ascii
+$s18 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s19 = ""OOEValueAnimator.FixedUpdate is running."" fullword wide
+$s20 = ""get_endColor"" fullword ascii"
+93da5b68246f2c37789b4fe137f570a7eaf939810bedac23fc6ce070a19672e5,"$s1 = ""?System.Windows.Forms.Design.ParentControlDesigner,System.DesignqSystem.ComponentModel.Design.IDesigner, System, Version=4.0.0.0"" ascii
+$s2 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s3 = ""fSystem.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3agSystem.Drawing.Point, Sy"" ascii
+$s4 = ""System.Windows.Forms.ImageListStreamer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089P"" ascii
+$s5 = ""fSystem.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3agSystem.Drawing.Point, Sy"" ascii
+$s6 = ""stem.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aBj"" fullword ascii
+$s7 = ""sHXPC.exe"" fullword wide
+$s8 = ""?System.Windows.Forms.Design.ParentControlDesigner,System.DesignqSystem.ComponentModel.Design.IDesigner, System, Version=4.0.0.0"" ascii
+$s9 = ""506D6A6541"" wide /* hex encoded string 'PmjeA' */
+$s10 = "", Culture=neutral, PublicKeyToken=b77a5c561934e089"" fullword ascii
+$s11 = ""XMLFormEditor.XMLTreeDialog.resources"" fullword ascii
+$s12 = ""XMLControl2ControlDictionary.ContainsKey:"" fullword wide
+$s13 = ""XMLControl2ControlDictionary.ContainsKey(ctr):"" fullword wide
+$s14 = ""Cross.ico"" fullword wide
+$s15 = ""Down.ico"" fullword wide
+$s16 = ""DownLeft.ico"" fullword wide
+$s17 = ""DownRight.ico"" fullword wide
+$s18 = ""Left.ico"" fullword wide
+$s19 = ""Right.ico"" fullword wide
+$s20 = ""TDown.ico"" fullword wide"
+b0b23fc04103747a567f6233dfaee3bc9405ec84550ace32acfcd66a57d104ea,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADo"" fullword ascii
+$s3 = ""OrbOfEverything.exe"" fullword wide
+$s4 = ""OrbOfEverything.Game.Logic.Enemy"" fullword ascii
+$s5 = ""OrbOfEverything.Game.Logic.Player"" fullword ascii
+$s6 = ""OrbOfEverything.Game.Logic.Core"" fullword ascii
+$s7 = ""OrbOfEverything.Game.Logic.PowerUp"" fullword ascii
+$s8 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s9 = ""targetDuration"" fullword ascii
+$s10 = ""MakeInvulnerable"" fullword ascii
+$s11 = ""IsVulnerable"" fullword ascii
+$s12 = ""MakeVulnerable"" fullword ascii
+$s13 = ""OrbOfEverything.GameDefeatDialog"" fullword ascii
+$s14 = ""GameDefeatDialog_FormClosed"" fullword ascii
+$s15 = ""get_enemyOrbInBlue"" fullword ascii
+$s16 = ""get_enemyOrbInPurple"" fullword ascii
+$s17 = ""OrbOfEverything.GameDefeatDialog.GameDefeatDialog.resources"" fullword ascii
+$s18 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s19 = ""OOEValueAnimator.FixedUpdate is running."" fullword wide
+$s20 = ""get_endColor"" fullword ascii"
+4b3bab16ab902ffc20293209b8fe86c6e93502648b6788601b41a1934d2822c3," $s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""  <!-- Enable themes for Windows common controls and dialogs (Windows XP and later) -->"" fullword ascii
+$s3 = ""lfwhUWZlmFnGhDYPudAJ.exe"" fullword wide
+$s4 = ""get_encryptedPassword"" fullword ascii
+$s5 = ""SMTP Password"" fullword wide
+$s6 = ""Foxmail.exe"" fullword wide
+$s7 = ""\\GhostBrowser\\User Data\\Default\\Login Data"" fullword wide
+$s8 = ""\\mozglue.dll"" fullword wide
+$s9 = "" - keystroke Logs ID - "" fullword wide
+$s10 = "" - Passwords ID - "" fullword wide
+$s11 = ""Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows Messaging Subsystem\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A667"" wide
+$s12 = ""4System.Web.Services.Protocols.SoapHttpClientProtocol"" fullword ascii
+$s13 = ""\\Comodo\\Dragon\\User Data\\Default\\Login Data"" fullword wide
+$s14 = ""\\SnakeKeylogger"" fullword wide
+$s15 = ""\\SnakeKeylogger\\"" fullword wide
+$s16 = ""Key Content * : (?<after>.*)"" fullword wide
+$s17 = ""set_encryptedPassword"" fullword ascii
+$s18 = ""KeyLoggerEventArgsEventHandler"" fullword ascii
+$s19 = ""get_timePasswordChanged"" fullword ascii
+$s20 = ""KeyLoggerEventArgs"" fullword ascii"
+6577f5c5150e1dc818be87c2483db10b3af00effc2faf5c1acd174a8db760001,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""LumberRacer.exe"" fullword wide
+$s3 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s4 = ""SendKeyboardCommand"" fullword ascii
+$s5 = ""GetKeyCommands"" fullword ascii
+$s6 = ""set_CommandCount"" fullword ascii
+$s7 = ""<CommandCount>k__BackingField"" fullword ascii
+$s8 = ""get_AlgorithmConfig"" fullword ascii
+$s9 = ""GetCommandForLeaf"" fullword ascii
+$s10 = ""Telegram Lumberjack Racer - by @mehrandvd"" fullword wide
+$s11 = ""Lumber Racer - By Mehran DVD"" fullword wide
+$s12 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s13 = ""get_IsGameStarted"" fullword ascii
+$s14 = ""pictureBoxEye"" fullword wide
+$s15 = ""get_GrdidingSize"" fullword ascii
+$s16 = ""get_RequiredScore"" fullword ascii
+$s17 = ""pictureBoxEye_MouseClick"" fullword ascii
+$s18 = ""Want more than 400 scores!!!!!!??"" fullword ascii
+$s19 = ""GetColorDistance"" fullword ascii
+$s20 = ""btnStartEye_Click"" fullword ascii"
+567da55c5a9f89c31cc2e2ca01d9b688f2cf2d9614d93413eb05246a10a626e1,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""pet.exe"" fullword wide
+$s3 = ""pet.FormLogin.resources"" fullword ascii
+$s4 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s5 = ""FormLogin"" fullword wide
+$s6 = ""lblLogin"" fullword wide
+$s7 = ""txtLogin"" fullword wide
+$s8 = ""btnLogin_Click"" fullword ascii
+$s9 = ""btnLogin"" fullword wide
+$s10 = ""SELECT login, senha FROM Funcionarios WHERE login = @login AND senha = @senha"" fullword wide
+$s11 = ""Login ou senha inv"" fullword wide
+$s12 = ""pbCliente"" fullword wide /* base64 encoded string 'l)bz{^' */
+$s13 = ""Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=C:\\Programas\\pet\\pet\\DbPetshop1.mdf;Integrated Security = True"" fullword wide
+$s14 = ""@login"" fullword wide
+$s15 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s16 = ""textodecode"" fullword ascii
+$s17 = ""uxx, - )M"" fullword ascii
+$s18 = ""Nlog#sDw"" fullword ascii
+$s19 = ""InserirCliente"" fullword wide
+$s20 = ""textoencode"" fullword ascii"
+98c19753dbee8352bb450feb4d842079a04b17456e21761e713b9d481b00ac86,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""WinForm-SearchBox.exe"" fullword wide
+$s3 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s4 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s5 = ""get_displaytext"" fullword ascii
+$s6 = ""get_colname"" fullword ascii
+$s7 = ""displaytext"" fullword wide
+$s8 = ""  <trustInfo xmlns=\""urn:schemas-microsoft-com:asm.v2\"">"" fullword ascii
+$s9 = ""_x:\""t+"" fullword ascii
+$s10 = ""User Weight"" fullword wide
+$s11 = ""comboBox1_SelectedIndexChanged"" fullword ascii
+$s12 = ""Keyword:"" fullword wide
+$s13 = ""Edwardson"" fullword ascii
+$s14 = ""Rukhsana"" fullword ascii
+$s15 = ""Bolkvadze"" fullword ascii
+$s16 = ""Waldemar"" fullword ascii
+$s17 = ""Espinoza"" fullword ascii
+$s18 = ""17.0.0.0"" fullword ascii
+$s19 = ""Gouveia"" fullword ascii
+$s20 = ""      <requestedPrivileges xmlns=\""urn:schemas-microsoft-com:asm.v3\"">"" fullword ascii"

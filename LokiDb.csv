@@ -1,0 +1,81 @@
+Malware_sha256,Malicious_strings
+9b84ca1d7fb41a824ccb4693789fee6b94cea21cbd8645840814dfb650ffdb20,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""UXlsZakz.exe"" fullword wide
+$s3 = ""ExecuteButton"" fullword wide
+$s4 = ""ExecuteButton_Click"" fullword ascii
+$s5 = ""ProcessOneLine"" fullword ascii
+$s6 = ""UXlsZakz.pdb"" fullword ascii
+$s7 = ""PasswordTextbox"" fullword wide
+$s8 = ""StringCommandParameter"" fullword ascii
+$s9 = ""BASIC AUTH requires a password"" fullword wide
+$s10 = ""Executing ..."" fullword wide
+$s11 = ""HttpMethodComboBox"" fullword wide
+$s12 = ""get_tSCCgXXP"" fullword ascii
+$s13 = ""afterAt"" fullword ascii
+$s14 = ""7453434367585850%716562"" fullword wide /* hex encoded string 'tSCCgXXPqeb' */
+$s15 = ""MIME (Content Type)"" fullword wide
+$s16 = ""paramter"" fullword ascii
+$s17 = ""UsernameLabel"" fullword wide
+$s18 = ""MarkdownTableFormatter.Properties.Resources.resources"" fullword ascii
+$s19 = ""ServiceURLTextbox"" fullword wide
+$s20 = ""ServiceURLLabel"" fullword wide"
+d47da2a7814b71f8a6adc53ce8f8998bae87ecd7625d09679784bc1bd62198f0,"$s1 = ""lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.R"" ascii
+$s2 = ""hSystem.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3aPADPADP"" fullword ascii
+$s3 = ""HscA.exe"" fullword wide
+$s4 = ""HscA.pdb"" fullword ascii
+$s5 = ""GetFreeSquares"" fullword ascii
+$s6 = ""get_NoSolutions"" fullword ascii
+$s7 = ""get_Searching"" fullword ascii
+$s8 = ""* W|-{H"" fullword ascii
+$s9 = ""get_FoundSolutions"" fullword ascii
+$s10 = ""75444246%626F69"" fullword wide /* hex encoded string 'uDBFboi' */
+$s11 = ""*jRjCWRUNx"" fullword ascii
+$s12 = ""nQueensInput_KeyPress"" fullword ascii
+$s13 = ""16.0.0.0"" fullword ascii
+$s14 = ""Win Forms Collaboration"" fullword wide
+$s15 = ""get_uDBF"" fullword ascii
+$s16 = ""Eighter"" fullword wide
+$s17 = ""etna forma aplikacije"" fullword wide
+$s18 = ""label01"" fullword wide
+$s19 = ""get_QueenLocations"" fullword ascii
+$s20 = ""btnStudent7"" fullword wide"
+cecf830723d721cfa371e63df9576c5d5cdba53d2dda7c2d8db320f82cb4d4a5,"$s1 = ""SELECT encryptedUsername, encryptedPassword, formSubmitURL, hostname FROM moz_logins"" fullword ascii
+$s2 = ""sCrypt32.dll"" fullword wide
+$s3 = ""SmtpPassword"" fullword wide
+$s4 = ""SMTP Password"" fullword wide
+$s5 = ""FtpPassword"" fullword wide
+$s6 = ""%s\\%s%i\\data\\settings\\ftpProfiles-j.jsd"" fullword wide
+$s7 = ""aPLib v1.01  -  the smaller the better :)"" fullword ascii
+$s8 = ""%s\\%s\\User Data\\Default\\Login Data"" fullword wide
+$s9 = ""%s%s\\Login Data"" fullword wide
+$s10 = ""%s%s\\Default\\Login Data"" fullword wide
+$s11 = ""%s\\32BitFtp.TMP"" fullword wide
+$s12 = ""%s\\GoFTP\\settings\\Connections.txt"" fullword wide
+$s13 = ""Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows Messaging Subsystem\\Profiles\\Outlook"" fullword wide
+$s14 = ""%s\\Mozilla\\SeaMonkey\\Profiles\\%s"" fullword wide
+$s15 = ""%s\\%s\\%s.exe"" fullword wide
+$s16 = ""More information: http://www.ibsensoftware.com/"" fullword ascii
+$s17 = ""%s\\nss3.dll"" fullword wide
+$s18 = ""PopPassword"" fullword wide
+$s19 = ""SmtpPort"" fullword wide
+$s20 = ""SmtpAccount"" fullword wide"
+cf209f1477fa2db39423e1be03acadbcca31029b1c2a19ce2efadda8c099dc6c,"$s1 = ""MKiJ887777.exe"" fullword wide
+$s2 = ""        <requestedExecutionLevel level=\""asInvoker\"" uiAccess=\""false\""/>"" fullword ascii
+$s3 = ""  <assemblyIdentity version=\""1.0.0.0\"" name=\""MyApplication.app\""/>"" fullword ascii
+$s4 = "" Type Descriptor'"" fullword ascii
+$s5 = "" constructor or from DllMain."" fullword ascii
+$s6 = ""  <trustInfo xmlns=\""urn:schemas-microsoft-com:asm.v2\"">"" fullword ascii
+$s7 = ""XOQ.exS"" fullword ascii
+$s8 = "" Class Hierarchy Descriptor'"" fullword ascii
+$s9 = "" Base Class Descriptor at ("" fullword ascii
+$s10 = "" Complete Object Locator'"" fullword ascii
+$s11 = ""1CXm- "" fullword ascii
+$s12 = ""      <requestedPrivileges xmlns=\""urn:schemas-microsoft-com:asm.v3\"">"" fullword ascii
+$s13 = ""MKiJ887777"" fullword wide
+$s14 = ""Broken pipe"" fullword ascii /* Goodware String - occured 742 times */
+$s15 = ""Permission denied"" fullword ascii /* Goodware String - occured 823 times */
+$s16 = ""c;XxiVu^-"" fullword ascii
+$s17 = ""SQKL4wp"" fullword ascii
+$s18 = ""L$PQSV"" fullword ascii /* Goodware String - occured 1 times */
+$s19 = ""CZBj>T]e];.n"" fullword ascii
+$s20 = ""9pMKrVn4"" fullword ascii"
