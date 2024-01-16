@@ -5,7 +5,8 @@
 
 These Python packages are to be installed on the host device:
 <p align="center">
-<img src="https://i.imgur.com/NKqNspm.jpg" height="80%" width="80%"><br>
+![Screenshot 2024-01-16 175228](https://github.com/Laalas333/YarWeb/assets/141653171/e438d6cf-4a14-4e80-a868-4e3bbf0cfaac)
+<br>
 Fig 1.1<br></p>
 </p>
 
