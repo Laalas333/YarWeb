@@ -6,15 +6,13 @@ final.py is the heart of YarWeb. It does all the backend and core functions incl
 These Python packages are to be installed on the host device:
 
 ![image](https://github.com/Laalas333/YarWeb/assets/141653171/fa3dd37e-bb49-4c50-830f-755996e5b65b)
-
-Fig 1.1
+<center>Fig 1.1</center>
 
 # File setup:
 6 folders are to be available in the current working directory for YarWeb to function. These folders will be explained individually below:
 
 ![image](https://github.com/Laalas333/YarWeb/assets/141653171/483a7d4b-1c3e-4785-b292-77f311168f56)
-
-Fig 1.2
+<center>Fig 1.2</center>
 
 Instance is a folder created by the script in association with the SQLAlchemy package. The purpose of this directory is to store a users.db file. This database file contains all the login information about the users who have registered on YarWeb. It is to be noted, that all the user-sensitive information such as passwords are encrypted/hashed before being stored in the database using the Python package bcyrpt.
 test_malwares is a folder that contains all the malware signature folders. Subsequently, these signature folders store malware samples of their own. These files are used to create the .csv files i.e. the database for rule creation.
@@ -30,5 +28,4 @@ Malware_for_testing is a folder that contains signature folders very similar to 
 Make sure that the .csv databases are not stored together in a folder of their own. If done so, changes would have to be made to the final.py script. The Python script should also be in the current working directory but not in a separate folder within the directory. An ideal setup would look like this:
 
 ![image](https://github.com/Laalas333/YarWeb/assets/141653171/12504e17-d006-4270-8308-2fbfb3755627)
-
-Fig 1.3
+<center>Fig 1.3</center>
