@@ -5,16 +5,14 @@
 
 These Python packages are to be installed on the host device:
 <p align="center">
-<img src="![Screenshot 2024-01-16 175228](https://github.com/Laalas333/YarWeb/assets/141653171/720f900d-2d9c-47ac-a40c-d0a46e784880)
-" height="80%" width="80%"><br>
+<img src="https://i.imgur.com/NKqNspm.jpg" height="80%" width="80%"><br>
 Fig 1.1<br></p>
 </p>
 
 <h3>File setup:</h3>
 <p> 6 folders are to be available in the current working directory for YarWeb to function. These folders will be explained individually below:
 <p align="center">
-<img src="![Screenshot 2024-01-16 175259](https://github.com/Laalas333/YarWeb/assets/141653171/de0f3a26-606d-4374-82cc-88679fbc13aa)
-" height="80%" width="80%"><br>
+<img src="https://i.imgur.com/vkjBWJn.jpg" height="80%" width="80%"><br>
 Fig 1.2<br></p>
 <b>Instance</b> is a folder created by the script in association with the SQLAlchemy package. The purpose of this directory is to store a users.db file. This database file contains all the login information about the users who have registered on YarWeb. It is to be noted, that all the user-sensitive information such as passwords are encrypted/hashed before being stored in the database using the Python package bcyrpt.<br>
 
@@ -31,7 +29,6 @@ Fig 1.2<br></p>
 Make sure that the .csv databases are not stored together in a folder of their own. If done so, changes would have to be made to the final.py script. The Python script should also be in the current working directory but not in a separate folder within the directory. An ideal setup would look like this:
 
 <p align="center">
-<img src="![Screenshot 2024-01-16 175356](https://github.com/Laalas333/YarWeb/assets/141653171/eed2823e-e23a-49cb-9ed3-5d89b4c98609)
-" height="80%" width="80%"><br>
+<img src="https://i.imgur.com/KETgnYO.jpg" height="80%" width="80%"><br>
 Fig 1.3<br></p>
 </p>
